@@ -1,0 +1,25 @@
+.main-panel {
+    width: 100%;
+    height: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: rgba(51, 51, 51, 255);
+    align-items: center;
+}
+
+.label {
+    font-size: 23px;
+    -unity-font-style: bold;
+    color: rgba(219, 219, 219, 255);
+    margin-top: 50px;
+}
+
+.button {
+    margin-top: 30px;
+    width: 350px;
+    height: 50px;
+    font-size: 15px;
+    -unity-font-style: normal;
+}

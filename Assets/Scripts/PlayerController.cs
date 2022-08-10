@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Photon.Pun;
 
 public class PlayerController : MonoBehaviour
@@ -78,9 +79,9 @@ public class PlayerController : MonoBehaviour
     {
         if (!_photonView.IsMine)
             return;
-        
+
         _health -= damage;
-        if(_health <= 0)
+        if (_health <= 0)
             PhotonNetwork.Destroy(gameObject);
     }
 

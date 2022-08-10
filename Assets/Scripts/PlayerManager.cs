@@ -1,13 +1,10 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 
 public class PlayerManager : MonoBehaviour
 {
     private PhotonView _photonView;
-    private float[,] coordinates = {
+    private readonly float[,] _coordinates = {
         {-1.4f, -35.24f},
         {8.2f, -5.1f},
         {37.8f, -5.1f},
@@ -24,9 +21,9 @@ public class PlayerManager : MonoBehaviour
 
     private void CreatePlayer()
     {
-        int randomIndex = UnityEngine.Random.Range(0, coordinates.Length - 1);
-
-        Vector3 playerPosition = new Vector3(coordinates[randomIndex, 0], 0, coordinates[randomIndex, 1]);
+        int randomIndex = UnityEngine.Random.Range(0, _coordinates.GetLength(0));
+        Debug.Log(randomIndex);
+        Vector3 playerPosition = new Vector3(_coordinates[randomIndex, 0], 0, _coordinates[randomIndex, 1]);
         PhotonNetwork.Instantiate("Player", playerPosition, Quaternion.identity);
     }
 }
